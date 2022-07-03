@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Bootstrap Grids</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      div.row {
+        font-size: 20px;
+        text-align: center;
+        border: thin solid grey;
+        border-radius: 5px;
+        height: 10vh;
+      }
+
+      div.row > div:nth-child(odd) {
+        background-color: lightgreen;
+      }
+      div.row > div:nth-child(even) {
+        background-color: lightcyan; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h2>CSS BS Grid Example</h2>
+
+      <p>Example :- 12/4 = 3 => 100/3 = 33.33%</p>
+      <div class="row">
+        <div class="col-sm-4">Col-33.33%</div>
+        <div class="col-sm-4">Col-33.33%</div>
+        <div class="col-sm-4">Col-33.33%</div>
+      </div>
+
+      <hr />
+      <p>Example :- 12/2 = 6 => 100/2 = 50%</p>
+      <div class="row">
+        <div class="col-sm-6">Col - 50%</div>
+        <div class="col-sm-6">Col - 50%</div>
+      </div>
+      <hr />
+      <p>Example :- 12/3 = 4 => 100/4 = 25%</p>
+      <div class="row">
+        <div class="col-sm-3">.col - 25%</div>
+        <div class="col-sm-3">.col - 25%</div>
+        <div class="col-sm-3">.col - 25%</div>
+        <div class="col-sm-3">.col - 25%</div>
+      </div>
+      <hr>
+      <p>Just provide only col it will automatically divide</p>
+      <div class="row">
+        <div class="col">.col - 25%</div>
+        <div class="col">.col - 25%</div>
+        <div class="col">.col - 25%</div>
+        <div class="col">.col - 25%</div>
+      </div>
+      <hr />
+      <p>Example :- Custom Scaling</p>
+      <div class="row">
+        <div class="col-sm-5">.col - 40%</div>
+        <div class="col-sm-5">.col - 40%</div>
+        <div class="col-sm-2">.col - 20%</div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
