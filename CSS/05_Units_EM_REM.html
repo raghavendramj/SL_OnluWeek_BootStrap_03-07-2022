@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Units of CSS - EM and REM</title>
+    <style>
+      * {
+        margin: 10px;
+      }
+
+      body {
+        padding: 5px;
+        border: 2px solid black;
+        height: 500px;
+        width: 500px;
+        margin: 5px;
+        /* Default font size is 16px */
+        /* 1em = 16px */
+        font-size: 1em; /*1em = 16px*/
+      }
+
+      section {
+        margin: 1em; /*1em = 5px*/
+        padding: 2em; /*1em = 5px, So 2em = 10px*/
+        border: 2px solid red;
+        font-size: 2em; /*16 * 2 = 32px*/
+      }
+
+      div {
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid blue;
+        font-size: 1.2em;
+      }
+      p {
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid brown;
+        /* 1rem = root's => body font-size in px = 16px */
+        /* 1.5rem = 1.5 * 16 = 24px */
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    Units of CSS - EM and REM
+    <section>
+      This is section
+      <div>
+        This is div
+        <p>This is paragraph</p>
+      </div>
+    </section>
+  </body>
+</html>

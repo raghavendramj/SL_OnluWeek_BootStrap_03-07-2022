@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>CSS Introduction - Selectors!</title>
+    <style>
+        /* Selector => ID -> # */
+        #header {
+            color: red;
+        }
+
+        .myDiv {
+            /* Short hand -> BORDER */
+            /* width | style | color */
+            /* border: medium solid blue; */
+            /* border-width: medium thin thick medium; */
+            border-width: thick;
+            border-style: dashed solid dotted;
+            border-color: red green blue yellowgreen;
+
+            /* top | right | bottom | left;     */
+            padding: 10px 5px 15px 20px;
+
+            /* margin: 10px 20px 5px 10px;  */
+            margin: 20px;
+
+            /* width | style | color */
+            outline: medium solid black;
+            outline-offset: 5px;
+        }
+
+        p, span {
+            border: thin solid red;
+            height: 20px;
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Welcome to CSS World</h1>
+    <h4 id="para">The palce where magic begins!</h4>
+    <div class="myDiv">Priority goes like this</div>
+    <h5 class="myDiv">Nice h5 header</h5>
+    <p class="myDiv"> Sample Paragraph</h5>
+    <p>I am selected via Element / tagname</p>
+    <span>I am selected via Element / tagname</span>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>HTML CSS Selectors!</title>
+    <style>
+      p {
+        border: thin solid black;
+        height: 20px;
+        margin: 20px;
+        padding: 10px;
+        color: brown;
+        background-color: lightcyan;
+      }
+
+      .class_para {
+        color: blue;
+        font-size: 20px;
+      }
+
+      #id_para {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>HTML CSS Selectors Priority!</h3>
+    <p>ID > CLASS > Element/TagName</p>
+    <div>
+      <p id="id_para" class="class_para">
+        Id selector has HIGHEST Priority than class and element
+      </p>
+      <p class="class_para">Class selector has HIGHEST Priority than element</p>
+      <p>Element selector has least Priority</p>
+      <p>
+        Inline CSS jas higher priority than other css selector has least
+        Priority
+      </p>
+      <p>External Stylesheet has least Priority</p>
+    </div>
+  </body>
+</html>
