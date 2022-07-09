@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Pseudo Elements -02</title>
+    <style>
+      p::before {
+        content: "Before Paragraph - ";
+        font-size: 25px;
+        font-variant: small-caps;
+        color: red;
+      }
+
+      p::after {
+        content: " - Done and dusted!";
+        font-size: 25px;
+        font-variant: small-caps;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>
+      The ::before pseudo-element inserts content before the content of an
+      element.
+    </p>
+
+    <h1>This is a heading</h1>
+  </body>
+</html>

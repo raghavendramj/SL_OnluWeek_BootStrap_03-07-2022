@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Flexible Box</title>
+    <style>
+      /* Flex children */
+      .container > div {
+        width: 3vw;
+        height: 4vh;
+        border: thin solid red;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+      /* Flex parent */
+      .container {
+        width: 70vw;
+        height: 45vh;
+        border: thin solid black;
+        margin: 10px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        /* row, row-reverse, column, column-reverse */
+        flex-direction: column;
+        /* wrap, nowrap */
+        flex-wrap: wrap;
+        /*center, flex-start, flex-end, 
+        space-between, space-around, space-evenly*/
+        justify-content: flex-start;
+
+        /* flex-start, flex-end, center, strech, baseline */
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h4 style="text-indent: 10px">Flex Box Examaple</h4>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+  </body>
+</html>

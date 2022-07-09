@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Colors in CSS</title>
+    <style>
+      div.container > div {
+        padding: 10px;
+        margin: 10px;
+        border: thin solid red;
+        border-radius: 10px;
+        font-size: 30px;
+      }
+
+      #container1 {
+        color: rebeccapurple;
+      }
+
+      #container2 {
+        /*FF -> RED, FF-> GREEN, FF->BLUE*/
+        /*FF0000 -> RED*/
+        /*00FF00 -> GREEN*/
+        /*0000FF -> BLUE*/
+        color: #881963;
+      }
+
+      /* Range -> RED GREEN BLUE  
+      (BLACK) 0 0 0
+      (WHITE)255 255 255 */
+      #container3 {
+        color: rgb(255, 255, 255);
+        background-color: rgb(71, 56, 99);
+      }
+
+      /* Hue, Saturation, lightness */
+      #container4 {
+        color: hsl(241, 59%, 38%);
+        background-color: aquamarine;
+      }
+
+      /* Range -> RED BLUE GREEN + Opacity*/
+      #container5 {
+        color: rgba(26, 19, 54, 0.363);
+      }
+
+      /* Hue, Saturation, lightness + A=Opacity*/
+      #container6 {
+        color: rgba(0, 255, 98, 0.863);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="container1">Color</div>
+      <div id="container2">Hexa Decimal</div>
+      <div id="container3">RGB</div>
+      <div id="container4">HSL</div>
+      <div id="container5">RGBA</div>
+      <div id="container6">HSLA</div>
+    </div>
+  </body>
+</html>
