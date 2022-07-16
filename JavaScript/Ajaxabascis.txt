@@ -1,0 +1,49 @@
+HTTP Methods
+-------------
+
+1. GET ->  retrieve information from the given server using a given URI
+   DB ->   select * from employee; -> LIST OF EMPLOYEES;
+
+2. POST ->  send data to the server, for example, customer information, file upload, etc.
+    DB -> insert into employee(id, name, email) values(1, 'john', 'john@gmail.com');
+    
+3. PUT -> Replaces all current representations of the target resource with the uploaded content
+    DB -> update employee set name='John Doe', email='john.doe@gmail.com' where id=1;
+
+4. DELETE -> Removes all current representations of the target resource given by a URI.
+    DB -> delete from employee where name='John Doe';
+
+
+HTTP Status Codes:-
+------------------
+
+1XX -> Informational
+100 -> Continue
+
+2XX -> Succcess
+200 -> Ok -> GET
+201 -> Created -> Successfully object got created!
+
+3xx Redirection
+301 -> Moved Permanently
+
+4xx Client Error
+400 Bad Request
+401 Unauthorized
+403 Forbidden
+404 Not Found
+
+5xx Server Error
+500 Internal Server Error
+
+
+
+onreadystatechange 
+
+readyState 
+	Holds the status of the XMLHttpRequest.
+        0: request not initialized
+        1: server connection established
+        2: request received
+        3: processing request
+        4: request finished and response is ready

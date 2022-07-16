@@ -1,0 +1,10 @@
+<h1>AJAX</h1>
+<p>AJAX = Asynchronous JavaScript And XML.</p>
+<p>AJAX is not a programming language.</p>
+<p>AJAX is a technique for accessing web servers from a web page.</p>
+<p>AJAX stands for Asynchronous JavaScript And XML.</p>
+<p>
+<h3>AJAX just uses a combination of: </h3>
+<p>A browser built-in XMLHttpRequest object (to request data from a web server)</p>
+<p>JavaScript and HTML DOM (to display or use the data)</p>
+</p>
