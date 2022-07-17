@@ -1,0 +1,8 @@
+<div class="container m-3">
+  <div>
+    <label for="content" class="form-label">Parent Component :- </label>
+    <input type="text" class="form-control" [(ngModel)]="inputMsg" [value]="inputMsg"/>
+    <p class="mt-2">Message received from child is : <span class="boldAndred">{{msgFromChild}}</span></p>
+  </div>
+  <app-child [childMsg]="inputMsg" (childMsgEvent)="receiveMsgFromChild($event)"></app-child>
+</div>

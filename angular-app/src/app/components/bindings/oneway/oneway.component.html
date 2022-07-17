@@ -1,0 +1,14 @@
+<div class="container m-3">
+    <h3>String Interpolation</h3>
+    <h4 class="m-4">Welcome to {{ title }}</h4>
+
+    <div class="form-group col-8">
+        <h3>Property Binding</h3>
+        <label for="username" class="form-label">Username :- </label>
+        <input type="text" name="username" class="form-control" [disabled]="isDisabled" />
+    </div>
+    <h3>Event Binding</h3>
+    <button class="btn btn-primary mt-3" (click)="enableUsername()">
+        Enable Username Field
+    </button>
+</div>

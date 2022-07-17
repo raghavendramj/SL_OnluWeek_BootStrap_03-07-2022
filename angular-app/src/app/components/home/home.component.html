@@ -1,0 +1,31 @@
+<div class="container">
+  <h4>One way data binding</h4>
+  <div>
+    <p><b>Interpolation</b></p>
+    <p>{{ details }}</p>
+  </div>
+  <hr />
+  <div>
+    <p><b>Property Binding</b></p>
+    <input type="text" [value]="myEmail" />
+    <br />
+    <input type="text" [value]="myEmail" [disabled]="isDisabled" />
+  </div>
+  <hr />
+  <div>
+    <p><b>Class Binding -Only one class</b></p>
+    <p [class]="bolderText">This text is styled using CLASS Binding</p>
+    <p><b>Class Binding -Multiple classes</b></p>
+    <p [class]="multipleClasses">
+      This text is styled using two or more classes
+    </p>
+    <p><b>Class Binding - Conditional Classes</b></p>
+    <p [class.blueColor]="applyBlue">This is styled with conditions</p>
+  </div>
+  <hr />
+  <p><b>Style Binding</b></p>
+  <p [style]="'color:blue; font-size: 30px;'">
+    This is styled with style bindings - INLINE
+  </p>
+  <p [style]="myStyle">This is styled with style bindings - VARIABLE</p>
+</div>

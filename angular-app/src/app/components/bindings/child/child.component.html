@@ -1,0 +1,15 @@
+<div class="mt-3">
+  <p>Inside Child Component :- And the message from parent is :-</p>
+  <p [class]="redColor">{{ childMsg }}</p>
+
+  <h2>Child to Parent Component Interaction</h2>
+  <article>
+    <label for="content" class="form-label">Child Component :- </label>
+    <article class="col-6">
+      <input type="text" class="form-control" [(ngModel)]="msgToParent" />
+    </article>
+  </article>
+  <button class="btn btn-primary mt-2" (click)="sendMyMsgToParent()">
+    Send My Message To Parent
+  </button>
+</div>

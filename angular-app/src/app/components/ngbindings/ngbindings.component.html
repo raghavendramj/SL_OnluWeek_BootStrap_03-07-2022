@@ -1,0 +1,50 @@
+<div class="container mt-3">
+    <div *ngIf="contentDone">
+      <p
+        class="h3"
+        [ngStyle]="{
+          color: 'red',
+          'font-size': '25px',
+          'background-color': 'lightgreen'
+        }"
+      >
+        This is of ngStyle example
+      </p>
+  
+      <ul>
+        <li
+          *ngFor="let name of names; let i = index"
+          type="none"
+          [ngStyle]="{ 'font-size': '25px', color: getColor(name) }"
+        >
+          {{ i + 1 }}. {{ name }}
+        </li>
+      </ul>
+    </div>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Sl.N</th>
+          <th>Name</th>
+          <th>Country</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let person of people; let i = index; let odd=odd; let even=even;"
+          [ngClass]="{ highlight: odd }" >
+          <td>{{ i + 1 }}</td>
+          <td>{{ person.name }}</td>
+          <td>{{ person.country }}</td>
+          <td>{{ person.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  <div class="container mt-3">
+    <div appCustomStyle>This is custom styled text</div> 
+  </div>

@@ -1,0 +1,15 @@
+.makeItBold {
+  font-weight: bolder;
+  font-size: 20px;
+  color: red;
+}
+
+.italicAndBold {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.blueColor {
+  color: blue;
+}
