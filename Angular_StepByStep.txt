@@ -1,0 +1,99 @@
+1. Installation
+	Download and Install nodejs :-
+	https://nodejs.org/en/download/
+
+	Dowload and install Visual Studio Code
+	https://code.visualstudio.com/download
+
+	Open Command Prompt :-
+		Install Node Package Manager:-
+			npm install -g npm
+		Install Angular:-
+			npm install -g @angular/cli@latest
+
+2. In the Command Prompt  :- Creating the project :-
+	1. mkdir angular-apps
+	2. cd angular-apps
+	3. create new angular project :-
+		ng new angular-app
+		 i. Would you like to add Angular routing? (y/N)  Y
+		 ii.Which stylesheet format would you like to use? (Use arrow keys) -> CSS
+		iii. cd angular-app
+	4. Install/include bootstrap, jquery in the system.
+		i. npm install bootstrap
+		ii. open styles.css
+		append this as first line @import "~bootstrap/dist/css/bootstrap.css"
+		iii. npm install jquery
+		iv. tsConfig.json
+				compilerOptions :  {"strict": true} -> change to compilerOptions :  {"strict": false}
+	5. Start the angular application.
+		npm start
+	6. Application will be launched with default page
+		URL ->  http://localhost:4200
+
+
+3. Creating various building blocks in Angular application :-
+
+1. Creating a component.
+	command:-
+		ng generate component component/home
+		ng g c component/home
+
+
+4. Data Interactions  -> Data Binding (Component -> Template -> Component)
+	1. One Way binding
+		i. Interpolation  -> {{title}}
+			Data Component -> Template
+			details(Component)	-> {{details}}(HTML)
+		ii. Property Binding
+			i. value, disabled...
+				myEmail: string = 'johndoe@gmail.com'(Component(TS)) => <input type="text" [value]="myEmail" />(Template/HTML)
+				isDisabled: boolean = true (Component(TS)) => input type="text" value="rag@gmail.com"  [disabled]="isDisabled"/>
+			ii. Class Binding
+				a. Only one class ->
+					1 -> [class]="bolderText" (HTML)
+					2 -> bolderText: string = 'makeItBold'; (Component)
+					3 -> .makeItBold{font-weight: bolder;} (CSS)
+				b. Multiple Classes ->
+					1 -> [class]="multipleClasses" (HTML)
+					2 -> multipleClasses = 'makeItBold' or multipleClasses = ['italicAndBold', 'blueColor']; (Component)
+					3 -> .italicAndBold{font-weight: bolder; font-style: italic;} .blueColor{color: blue} (CSS)
+				c. Conditional Class Binding
+					1 -> [class.blueColor]="applyBlueColor" (HTML)
+					2 -> applyBlueColor: boolean = true; (Component)
+					3 -> .blueColor{color: blue} (CSS)
+		iii. Event Binding
+			(click)  <Template> -> getData(); <Component>
+	2. Two way binding
+		() Event + [] Property binding => () + [] =>([ngModel])
+		HTML -> [(ngModel)]="emailAddress"
+		Component  ->   emailAddress: string = 'raghav@gmail.com';
+	3. Component Binding
+		i. Parent to Child
+            Parent -> TS -> parentMsg -> 'I am from parent'
+            Parent -> HTML -> [childMsg] = "parentMsg"
+            Child -> TS -> @Input childMsg
+            Child -> HTML -> {{childMsg}}
+		 ii. Child to Parent
+            Child -> HTML -> Event -> (click) -> sendToParent() <SEND MSG TO PARENT>
+            Child -> TS ->
+               @Output()
+               fromChildMsg: EventEmitter<string>= new EventEmitter();
+               msgToParent = 'I am from child';
+               sendToParent(){
+                  this.fromChildMsg.emit(msgToParent);
+               }
+            Parent ->
+               HTML -> <app-child (fromChildMsg)="getMsgFromChild($event)"></app-child>
+							<p> Message from child is :- <b>{{fromChildMsg}}</b></p>
+               TS -> fromChildMsg: string = '';
+						getMsgFromChild(data){
+							console.log(data); -> //'I am from child'
+							this.fromChildMsg = data;
+						}
+
+
+
+
+
+
